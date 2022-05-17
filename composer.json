@@ -1,0 +1,24 @@
+{
+    "name": "jeyroik/extas-repositories-file",
+    "description": "Extas compatable file repository package",
+    "require": {
+      "jeyroik/extas-conditions": "1.*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^9",
+      "vlucas/phpdotenv": "^3.4",
+      "jeyroik/extas-snuffbox-repositories": "0.*",
+      "jeyroik/extas-snuffbox": "0.*",
+      "phpstan/phpstan": "0.*"
+    },
+    "autoload": {
+      "psr-4": {
+        "extas\\": "src/",
+        "tests\\": "tests/"
+      }
+    },
+    "scripts": {
+      "test": "vendor/bin/phpunit --testdox --coverage-clover=coverage.xml --whitelist=src tests",
+      "stan": "vendor/bin/phpstan analyse -l 5 src"
+    }
+  }
